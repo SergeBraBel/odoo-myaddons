@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Virtualenv
+.venv/
+venv/
+env/
+
+# Editor/OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Odoo
+*.log
+*.pot
+*.mo
+.local/
+.cache/
+
+# Django (если добавишь)
+*.sqlite3
+media/
+staticfiles/
+
+# Node
+node_modules/
+
+# Secrets
+.env
+.env*
+*.key
+*.pem
+*.crt
