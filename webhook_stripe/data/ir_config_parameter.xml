@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <!-- По умолчанию секрет пуст (обучающий режим). В проде ОБЯЗАТЕЛЬНО заполнить. -->
+  <record id="ir_config_param_stripe_secret" model="ir.config_parameter">
+    <field name="key">stripe.webhook_secret</field>
+    <field name="value"></field>
+  </record>
+</odoo>

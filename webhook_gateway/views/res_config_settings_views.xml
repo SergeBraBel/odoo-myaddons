@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_webhook_gateway" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.webhook.gateway</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='settings']" position="inside">
+                <div class="app_settings_block" data-string="Webhook Gateway" string="Webhook Gateway">
+                    <h2>Webhook Gateway</h2>
+                    <div class="row mt16">
+                        <div class="col-12 col-lg-6">
+                            <label>Base endpoint</label>
+                            <p class="text-muted">Use <code>/webhook/&lt;provider&gt;</code> for all external hooks (e.g., <code>/webhook/stripe</code>).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

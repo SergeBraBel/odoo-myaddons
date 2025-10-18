@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Файл данных XML, который создаёт/инициализирует системные параметры -->
+<odoo>  <!-- корневой тег, обязателен для всех XML данных Odoo -->
+  <data noupdate="1">  <!-- noupdate=1: записи не будут перезаписаны при апгрейде -->
+
+    <!-- Путь, куда сохранять JSON (если пусто — модуль сам вычислит <data_dir>/webhook/orders) -->
+    <record id="param_webhook_orders_dir" model="ir.config_parameter">
+      <field name="key">webhook.orders_dir</field>     <!-- ключ параметра -->
+      <field name="value"></field>                     <!-- значение по умолчанию (пусто) -->
+    </record>
+
+    <!-- Секретный токен Jumpseller, который будем сравнивать -->
+    <record id="param_webhook_jumpseller_token" model="ir.config_parameter">
+      <field name="key">webhook.jumpseller_token</field>  <!-- ключ параметра -->
+      <field name="value"></field>                        <!-- заполни позже в интерфейсе -->
+    </record>
+
+  </data>
+</odoo>

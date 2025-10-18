@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <record id="ir_config_param_payments_dir" model="ir.config_parameter">
+    <field name="key">archive.payments_dir</field>
+    <field name="value">/opt/odoo18/payments_json</field>
+  </record>
+</odoo>

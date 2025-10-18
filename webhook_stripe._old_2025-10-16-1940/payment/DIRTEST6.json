@@ -1,0 +1,21 @@
+{
+  "order_id": "DIRTEST6",
+  "events": [
+    {
+      "received_at_ts": 1760562347,
+      "event_id": "evt_dirtest6",
+      "event_type": "payment_intent.succeeded",
+      "payload": {
+        "id": "evt_dirtest6",
+        "type": "payment_intent.succeeded",
+        "data": {
+          "object": {
+            "metadata": {
+              "order_id": "DIRTEST6"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

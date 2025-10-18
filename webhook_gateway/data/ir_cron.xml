@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <!-- Крон-заглушка: переводит события со статусом 'error' в 'retry'.
+       Оставляем выключенным (active=false) до момента, когда появится обработчик. -->
+  <record id="ir_cron_webhook_retry" model="ir.cron">
+    <field name="name">Webhook: retry failed</field>
+    <field name="model_id" ref="model_webhook_retry"/>
+    <field name="state">code</field>
+    <field name="code">model.cron_retry_failed()</field>
+    <field name="interval_number">5</field>
+    <field name="interval_type">minutes</field>
+    <!-- Следующий запуск через ~10 минут от установки -->
+    <field name="nextcall" eval="(DateTime.now() + relativedelta(minutes=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    <!-- Выполнять от имени суперпользователя -->
+    <field name="user_id" ref="base.user_root"/>
+    <field name="active">False</field>
+  </record>
+</odoo>
